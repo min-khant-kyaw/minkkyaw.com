@@ -1,5 +1,14 @@
+import { Button, Link } from '@material-ui/core';
 import React from 'react'
 import Typed from 'react-typed'
+
+const HomeContent = () => (
+  <div>
+    <Title />
+    <BlogButton />
+  </div>
+);
+
 
 const Title = () => (
   <Typed
@@ -11,4 +20,12 @@ const Title = () => (
   </Typed>
 );
 
-export default Title;
+const BlogButton = () => (
+  <div>
+    <Button variant="outlined" color="primary" href="#outlined-buttons">
+      <Link>Know thy author!</Link>
+    </Button>
+  </div>
+);
+
+export default HomeContent;
