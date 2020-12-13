@@ -1,9 +1,20 @@
 import { Text } from '@chakra-ui/react'
 import Typed from 'react-typed'
+import styled from 'styled-components'
+
 
 export default function Title({ contents }) {
+
+    const TitleTyped = styled.div`
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    text-align: center;
+    font-size: 3em;
+    `
+
     return (
-        <div>
+        <TitleTyped>
             <Text fontSize="5xl">I'm Min Khant Kyaw</Text>
             <Typed
                 strings={contents}
@@ -12,6 +23,6 @@ export default function Title({ contents }) {
                 smartBackspace={true}
                 loop>
             </Typed>
-        </div>
+        </TitleTyped>
     )
 }

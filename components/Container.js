@@ -10,7 +10,7 @@ export default function Container({ children }) {
 
     return (
         <div>
-            <p>Testing Children</p>
+            <p>Testing Children from Container</p>
             <main>
                 {children}
             </main>
