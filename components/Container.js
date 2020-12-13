@@ -29,8 +29,10 @@ export default function Body({ children }) {
     }
     `
     const BodyMain = styled.main`
+    margin: 0 auto;
     padding-left: 2rem;
     padding-right: 2rem;
+    max-width: 42rem;
     `
 
     return (

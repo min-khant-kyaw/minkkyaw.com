@@ -1,14 +1,16 @@
-import { TableRow } from '@material-ui/core'
 import styled from 'styled-components'
-import { Jumbotron, Container, Row } from 'react-bootstrap';
+import { Jumbotron, Row, Col } from 'react-bootstrap';
+import { Text } from '@chakra-ui/react';
+
 
 export default function Terminal() {
 
     const TerminalDiv = styled(Jumbotron)`
     background: transparent;
-    padding: 1em 0;
-    max-width: 750px;
+    padding: 1rem 0;
+    max-width: 35rem;
     margin: 0 auto;
+    margin-top: 2rem;
     width:100%;
     display: flex;
     align-content: center;
@@ -16,8 +18,9 @@ export default function Terminal() {
     flex-direction: column;
     `
     const TerminalBar = styled.div`
+    display: flex;
     align-items: center;
-    height: 2em;
+    height: 2rem;
     background-color: #E4E3E5;
     max-width: 1000px;
     border-radius: 10px 10px 0 0;
@@ -34,13 +37,13 @@ export default function Terminal() {
     background: #404040;
     color: #fff;
     `
-    const TerminalRow = styled(TableRow)`
+    const TerminalRow = styled(Row)`
     margin: 0;
-    padding: 1.25em 1em;
+    padding: 1.25rem 1rem;
     `
     const TerminalLink = styled.a`
     color: white;
-    font-size: 1.1em;
+    font-size: 1.1rem;
     `
 
     const info = [{
@@ -78,7 +81,7 @@ export default function Terminal() {
                 {info.map((info, i) =>
                     <TerminalRow key={i}>
                         <Col>
-                            <Typography component="" variant="h6">{info.title}</Typography>
+                            <Text>{info.title}</Text>
                             <TerminalLink target="_blank" href={info.link}>"<strong>{info.value}</strong>"</TerminalLink>
                         </Col>
                     </TerminalRow>
