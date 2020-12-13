@@ -1,6 +1,7 @@
-import { Button, Link } from '@material-ui/core';
 import React from 'react'
 import Typed from 'react-typed'
+import { Button, ButtonGroup } from "@chakra-ui/react"
+
 
 const HomeContent = () => (
   <div>
