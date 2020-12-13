@@ -1,6 +1,7 @@
 import App from 'next/app'
 import React from 'react'
 import { ThemeProvider } from 'styled-components';
+import '../css/main.css'
 
 const theme = {
     colors: {
