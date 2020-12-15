@@ -33,11 +33,6 @@ export default function Body({ children }) {
     padding-right: 2rem;
     max-width: 42rem;
   `;
-  const BodyText = styled(Text)`
-    line-height: 1.5em;
-    color: gray;
-    letter-spacing: 0.025rem;
-  `;
 
   return (
     <Container maxW="10%" centerContent={true}>

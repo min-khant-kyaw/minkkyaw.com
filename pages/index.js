@@ -3,6 +3,7 @@ import Title from "../components/Title";
 import Body from "../components/Container";
 import Terminal from "../components/Terminal";
 import styled from "styled-components";
+import { Text } from "@chakra-ui/react";
 
 const HomeContent = () => {
   const BodyText = styled(Text)`
@@ -20,11 +21,11 @@ const HomeContent = () => {
           "I'm <strong>an AI/ML enthusiast.",
         ]}
       />
-      <Text>
+      <BodyText>
         I'm a developer and a wrtier. I am a software developer working at
         Arrowcrest Technologies. This is my personal profile - everything about
         me can be found here.
-      </Text>
+      </BodyText>
       <Terminal />
     </Body>
   );
