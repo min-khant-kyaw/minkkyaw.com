@@ -29,8 +29,9 @@ const BlogIndex = ({ allPostsData }) => {
         Blog
       </Heading>
       <BodyText>
-        I've started blogging after I joined the workforce, mostly about
-        projects I've been doing and things I've learnt through the journey.
+        I've always wanted to kept a journal of my life and what better way to do than to write blogs.
+        I've started writing blogs after my 20th birthday as my New Year Resolution, mostly about
+        my journey, experience and projects I've been doing and things learnt throughout the journey.
       </BodyText>
       <Heading as="h1" size="2xl" marginY="2rem">
         Recent Blogs
