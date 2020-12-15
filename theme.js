@@ -1,7 +1,7 @@
 export default {
   fonts: {
-    body: "system-ui, sans-serif",
-    heading: "Georgia, serif",
-    mono: "Menlo, monospace",
+    body: "Lato, Inter, Arial, Helvetica, sans-serif",
+    heading: "Lato, Inter, Arial, Helvetica, sans-serif",
+    mono: "Lato, Inter, Arial, Helvetica, sans-serif",
   },
 };

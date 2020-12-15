@@ -9,9 +9,6 @@ const RecentBlog = () => {
 };
 
 const BlogIndex = ({ allPostsData }) => {
-  const HeaderText = styled(Heading)`
-    margin-bottom: 0.5rem;
-  `;
   const DateText = styled(Text)`
     color: gray;
     letter-spacing: 0.025rem;
@@ -29,9 +26,10 @@ const BlogIndex = ({ allPostsData }) => {
         Blog
       </Heading>
       <BodyText>
-        I've always wanted to kept a journal of my life and what better way to do than to write blogs.
-        I've started writing blogs after my 20th birthday as my New Year Resolution, mostly about
-        my journey, experience and projects I've been doing and things learnt throughout the journey.
+        I've always wanted to kept a journal of my life and what better way to
+        do than to write blogs. I've started writing blogs after my 20th
+        birthday as my New Year Resolution, mostly about my journey, experience
+        and projects I've been doing and things learnt throughout the journey.
       </BodyText>
       <Heading as="h1" size="2xl" marginY="2rem">
         Recent Blogs
@@ -41,9 +39,9 @@ const BlogIndex = ({ allPostsData }) => {
           <Grid h="100%" marginBottom="2rem">
             <GridItem>
               <Link key={slug} href="/blog/[slug]" as={`/blog/${slug}`}>
-                <HeaderText as="h3" size="lg">
+                <Heading as="h3" size="md">
                   {title}
-                </HeaderText>
+                </Heading>
               </Link>
               <DateText>{date}</DateText>
               <BodyText>{excerpt}</BodyText>
