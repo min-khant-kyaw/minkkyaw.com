@@ -20,7 +20,7 @@ export default function Body({ children }) {
     padding: 2rem;
   `;
   const NavbarLinks = styled.a`
-    font-size: 1.25rem;
+    font-size: 1rem;
     color: gray;
     padding: 0.25rem;
     @media (min-width: 640px) {
@@ -33,10 +33,16 @@ export default function Body({ children }) {
     padding-right: 2rem;
     max-width: 42rem;
   `;
+  const NavBar = styled.nav`
+    position: sticky;
+    z-index: 10;
+    top: 0;
+    backdrop-filter: saturate(180%) blur(20px);
+  `;
 
   return (
     <Container maxW="10%" centerContent={true}>
-      <nav>
+      <NavBar>
         {/* TODO */}
         <NavMenu>
           <NextLink href="/blog">
@@ -49,7 +55,7 @@ export default function Body({ children }) {
             <NavbarLinks>Home</NavbarLinks>
           </NextLink>
         </NavMenu>
-      </nav>
+      </NavBar>
       <BodyMain>{children}</BodyMain>
     </Container>
   );
