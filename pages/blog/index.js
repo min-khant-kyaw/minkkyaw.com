@@ -9,8 +9,13 @@ const RecentBlog = () => {
 };
 
 const BlogIndex = ({ allPostsData }) => {
-  const HeaderText = styled(Text)`
+  const HeaderText = styled(Heading)`
     margin-bottom: 0.5rem;
+  `;
+  const DateText = styled(Text)`
+    color: gray;
+    letter-spacing: 0.025rem;
+    margin-bottom: 1rem;
   `;
   const BodyText = styled(Text)`
     line-height: 1.5em;
@@ -35,8 +40,11 @@ const BlogIndex = ({ allPostsData }) => {
           <Grid h="100%" marginBottom="2rem">
             <GridItem>
               <Link key={slug} href="/blog/[slug]" as={`/blog/${slug}`}>
-                <Heading as="h3" size="lg">{title}</Heading>
+                <HeaderText as="h3" size="lg">
+                  {title}
+                </HeaderText>
               </Link>
+              <DateText>{date}</DateText>
               <BodyText>{excerpt}</BodyText>
             </GridItem>
           </Grid>
