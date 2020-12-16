@@ -32,6 +32,7 @@ export default function Body({ children }) {
     padding-left: 2rem;
     padding-right: 2rem;
     max-width: 42rem;
+    margin-bottom: 3rem;
   `;
 
   return (

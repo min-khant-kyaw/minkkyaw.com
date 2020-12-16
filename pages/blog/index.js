@@ -25,7 +25,7 @@ const BlogIndex = ({ allPostsData }) => {
 
   return (
     <Body>
-      <Heading as="h1" size="2xl" marginBottom="1rem">
+      <Heading as="h1" size="2xl" marginTop="0">
         Blog
       </Heading>
       <BodyText>

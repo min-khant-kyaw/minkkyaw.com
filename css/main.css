@@ -8,3 +8,8 @@
 body {
     font-family: Inter, Lato, Arial, Helvetica, sans-serif;
 }
+
+h1 {
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+}
