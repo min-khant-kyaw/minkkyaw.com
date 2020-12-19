@@ -7,31 +7,35 @@ import { Box, Heading, Text } from "@chakra-ui/react";
 import BlogTags from "../../components/BlogTags";
 import styled from "styled-components";
 
-
 const components = {};
 
 export default function Posts({ source, frontMatter }) {
   const content = hydrate(source, { components });
 
   const BlogTitle = styled(Heading)`
-  margin-bottom: 1.5rem;
-  letter-spacing: -0.012rem;
-  @media (min-width: 768px) {
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.012rem;
+    @media (min-width: 768px) {
       font-size: 3rem;
-  }
-  `
+    }
+  `;
   const BlogContent = styled(Text)`
-  line-height: 2rem;
-  margin-top: 2rem;
-  `
+    line-height: 2rem;
+    margin-top: 2rem;
+  `;
   return (
     <Body>
       <BlogTitle as="h1">{frontMatter.title}</BlogTitle>
-      <BlogTags author={frontMatter.author} date={frontMatter.date} read={frontMatter.read} />
+      <BlogTags
+        author={frontMatter.author}
+        date={frontMatter.date}
+        read={frontMatter.read}
+      />
       <BlogContent>{content}</BlogContent>
     </Body>
   );
 }
+
 export async function getStaticPaths() {
   const paths = getAllPostSlugs();
   return {
@@ -39,17 +43,18 @@ export async function getStaticPaths() {
     fallback: false,
   };
 }
+
 export async function getStaticProps({ params }) {
-    const postContent = await getPostdata(params.slug);
-    const { data, content } = matter(postContent);
-    const mdxSource = await renderToString(content, {
-      components,
-      scope: data
-    });
-    return {
-      props: {
-        source: mdxSource,
-        frontMatter: data
-      }
-    };
-  }
+  const postContent = await getPostdata(params.slug);
+  const { data, content } = matter(postContent);
+  const mdxSource = await renderToString(content, {
+    components,
+    scope: data,
+  });
+  return {
+    props: {
+      source: mdxSource,
+      frontMatter: data,
+    },
+  };
+}
