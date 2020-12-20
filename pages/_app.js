@@ -15,11 +15,9 @@ export default class MyApp extends App {
     const { Component, pageProps } = this.props;
 
     return (
-      <ChakraProvider>
-        <ThemeProvider theme={theme}>
+      <ThemeProvider theme={theme}>
           <Component {...pageProps} />
-        </ThemeProvider>
-      </ChakraProvider>
+      </ThemeProvider>
     );
   }
 }
