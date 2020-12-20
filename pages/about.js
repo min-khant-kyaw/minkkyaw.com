@@ -8,6 +8,7 @@ const About = () => {
   `;
   const AboutBody = styled(Text)`
     margin-bottom: 2rem;
+    color: gray;
   `;
 
   return (

@@ -6,15 +6,18 @@ import Body from "../../components/Container";
 import { Box, Heading, Text } from "@chakra-ui/react";
 import BlogTags from "../../components/BlogTags";
 import styled from "styled-components";
+import BlogQuote from "../../components/BlockQuote";
 
-const components = {};
+const components = { BlogQuote };
 
 export default function Posts({ source, frontMatter }) {
   const content = hydrate(source, { components });
 
   const BlogTitle = styled(Heading)`
+    font-size: 2rem;
     margin-bottom: 1.5rem;
     letter-spacing: -0.012rem;
+    font-weight: bold;
     @media (min-width: 768px) {
       font-size: 3rem;
     }
