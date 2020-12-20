@@ -6,9 +6,9 @@ import Body from "../../components/Container";
 import { Box, Heading, Text } from "@chakra-ui/react";
 import BlogTags from "../../components/BlogTags";
 import styled from "styled-components";
-import BlogQuote from "../../components/BlockQuote";
+import BlockQuote from "../../components/BlockQuote";
 
-const components = { BlogQuote };
+const components = { BlockQuote };
 
 export default function Posts({ source, frontMatter }) {
   const content = hydrate(source, { components });
