@@ -69,21 +69,19 @@ pip install -U -r requirements.txt
 This will download flickr_scraper to your PC, but you will not be able to the scraper just yet.
 You will need to Sign Up for flickr and request for an API key [here](https://www.flickr.com/services/apps/create/apply)
 
-Open ```flickr_scraper.py```and input the API key and secret in Line 9 & 10
+Open ```flickr_scraper.py``` and input the API key and secret in Line 9 & 10
 
-```
-key = ''
-secret = ''
-```
+
+**key = ''**
+
+**secret = ''**
+
 
 Now you have successfully setup your scraper and you are now able to execute it by running the following command
 
-> python3 flickr_scraper.py --search "{name}" --n {num} --download
-```
-python flickr_scraper.py --search "Nike Jordan 1 shoes" --n 100 --download
-```
+<BlockQuote>python3 flickr_scraper.py --search "(name)" --n (num) --download</BlockQuote>
 
-The images download will be automatically saved in ```flickr_scraper\images\{name}``` folder with randomised names.
+The images download will be automatically saved in **flickr_scraper\images\{name}** folder with randomised names.
 
 <br />
 
@@ -106,23 +104,12 @@ If you can't be bothered to read instructions, just download the tool from [here
 
 Once LabelImg is launched, make sure to ```Change Dir```to your train directory and ```Change Save Dir```to the same directory as well. Also, repeat the same process for test directory.
 
-I was tasked to label 4000+ images. No problem, I was being paid to do this...
+I was tasked to label 1000+ images. No problem, I was being paid to do this...
 <p>
   <img width="300" height="300" src="https://media1.tenor.com/images/e8811ef763720c5a399379dd68b641f9/tenor.gif?itemid=6139291" title="Not paid enough for this" />
 </p>
 
 After labelling an image, you can see that LabelImg will help create a .xml file containing the label data for each image. These xml files will help generate TFRecords which is one of the inputs to the TensorFlow trainer.
-
-## 5. Generating Training Data
-After done labelling, it is now time to generate data to train the TensorFlow model. We will be generating TFRecords that will serve as training to the TensorFlow training model. We will be using xml_to_cs.py and generate_tfrecord.py scripts from [Dat Tran’s Raccoon Detector dataset](http://github.com/datitran/raccoon_dataset) while making slight modifications to our scripts to work with our directory structure.
-
-
-## 6. Creating Label Map and Configuring Training
-
-
-
-## 7. Training The Model
-
 
 
 
