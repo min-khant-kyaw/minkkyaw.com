@@ -6,7 +6,7 @@ const BlogTags = ({ author, date, read }) => {
       <Box ml="3">
         <Text fontWeight="bold">{author}</Text>
         <Text fontSize="sm">
-          <Badge ml="1" colorScheme="green">
+          <Badge colorScheme="green">
             {date}
           </Badge>
           {"  "}

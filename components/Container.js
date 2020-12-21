@@ -20,10 +20,11 @@ export default function Body({ children }) {
     padding: 2rem;
   `;
   const NavbarLinks = styled.a`
-    font-size: 1.25rem;
+    font-size: 1rem;
     color: gray;
     padding: 0.25rem;
     @media (min-width: 640px) {
+      font-size: 1.25rem;
       padding: 1rem;
     }
   `;
@@ -32,12 +33,20 @@ export default function Body({ children }) {
     padding-left: 2rem;
     padding-right: 2rem;
     max-width: 42rem;
-    margin-bottom: 3rem;
+    @media (min-width: 768px) {
+      font-size: 1.125rem;
+    }
+  `;
+  const NavBar = styled.nav`
+    position: sticky;
+    z-index: 10;
+    top: 0;
+    backdrop-filter: saturate(180%) blur(20px);
   `;
 
   return (
     <Container maxW="10%" centerContent={true}>
-      <nav>
+      <NavBar>
         {/* TODO */}
         <NavMenu>
           <NextLink href="/blog">
@@ -50,7 +59,7 @@ export default function Body({ children }) {
             <NavbarLinks>Home</NavbarLinks>
           </NextLink>
         </NavMenu>
-      </nav>
+      </NavBar>
       <BodyMain>{children}</BodyMain>
     </Container>
   );
