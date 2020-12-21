@@ -2,7 +2,6 @@ import styled from 'styled-components'
 import { Jumbotron, Row, Col } from 'react-bootstrap';
 import { Text } from '@chakra-ui/react';
 
-
 export default function Terminal() {
 
     const TerminalDiv = styled(Jumbotron)`
@@ -57,7 +56,7 @@ export default function Terminal() {
     }, {
         title: "UD.resume",
         value: "minkhantkyaw.pdf",
-        link: "Resume"
+        link: "https://drive.google.com/file/d/1zauKKY396yBwrpXVNBak79EEfSuA1hUy/view?usp=sharing"
     }, {
         title: "UD.education",
         value: "Diploma in Information Technology (SP)",
