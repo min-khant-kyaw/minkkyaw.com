@@ -4,10 +4,6 @@ import Body from "../../components/Container";
 import { getSortedPosts } from "../../lib/posts";
 import styled from "styled-components";
 
-const RecentBlog = () => {
-  return <div>Test</div>;
-};
-
 const BlogIndex = ({ allPostsData }) => {
   const DateText = styled(Text)`
     color: #404040;
@@ -40,7 +36,7 @@ const BlogIndex = ({ allPostsData }) => {
             <GridItem>
               <Link key={slug} href="/blog/[slug]" as={`/blog/${slug}`}>
                 <Heading as="h3" size="md">
-                  <a>{title}</a>
+                  {title}
                 </Heading>
               </Link>
               <DateText>{date}</DateText>

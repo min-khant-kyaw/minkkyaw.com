@@ -4,6 +4,7 @@ import Body from "../components/Container";
 import Terminal from "../components/Terminal";
 import styled from "styled-components";
 import { Text } from "@chakra-ui/react";
+import Projects from "../components/Projects";
 
 const HomeContent = () => {
   const BodyText = styled(Text)`
@@ -27,6 +28,7 @@ const HomeContent = () => {
         me can be found here.
       </BodyText>
       <Terminal />
+      <Projects />
     </Body>
   );
 };
