@@ -10,7 +10,7 @@ const RecentBlog = () => {
 
 const BlogIndex = ({ allPostsData }) => {
   const DateText = styled(Text)`
-    color: gray;
+    color: #404040;
     letter-spacing: 0.025rem;
     margin-bottom: 1rem;
   `;
@@ -40,7 +40,7 @@ const BlogIndex = ({ allPostsData }) => {
             <GridItem>
               <Link key={slug} href="/blog/[slug]" as={`/blog/${slug}`}>
                 <Heading as="h3" size="md">
-                  {title}
+                  <a>{title}</a>
                 </Heading>
               </Link>
               <DateText>{date}</DateText>

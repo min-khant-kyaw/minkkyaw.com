@@ -1,6 +1,6 @@
 ---
-title: "Image Recognition model with TensorFlow Lite Part 1"
-date: "2020-08-10"
+title: "Image Recognition model with TensorFlow Lite (Part 1)"
+date: "2020-10-10"
 author: "Min Khant Kyaw"
 excerpt: "Making an image recognition model to work with Raspberry Pi"
 read: "10 minute read"
@@ -15,6 +15,8 @@ TensorFlow Lite is an optimised framework to help developers run TensorFlow mode
 
 This guide will be using an Anaconda virtual environment and I'll be training a shoe detector model to detect different types of shoes. The intent of this detection model is mainly to recognise the type of shoe detected by the camera. For demo purposes, I'll mainly be using recognisable and popular brands such as Nike and Adidas to differentiate the type of shoes.
 
+<br />
+
 ### To-do list
 1. [Installing required libraries and packages (Anaconda, CUDA & cdDNN)](https://github.com/min-khant-kyaw/image_classification/blob/master/README.md#1-installing-required-libraries-and-packages-anaconda-cuda--cddnn)
 2. [Setting up Directory and Anaconda Virtual Enviroment](https://github.com/min-khant-kyaw/image_classification/blob/master/README.md#2-setting-up-directory-and-anaconda-virtual-environment)
@@ -24,8 +26,9 @@ This guide will be using an Anaconda virtual environment and I'll be training a 
 6. [Creating Label Map and Configuring Training](https://github.com/min-khant-kyaw/image_classification/blob/master/README.md#6-creating-label-map-and-configuring-training)
 7. [Training The Model](https://github.com/min-khant-kyaw/image_classification/blob/master/README.md#7-training-the-model)
 
-## 1. Installing required Libraries and packages (Anaconda, CUDA & cdDNN)
+<br />
 
+## 1. Installing required Libraries and packages (Anaconda, CUDA & cdDNN)
 Firstly, I would recommend everyone to first download and install [Python](https://www.python.org/downloads/windows/), where v3.6.x would be my recommended version as most libraries work well with v3.6.x. After installing Python, I would follow this [Youtube video by Mark Jay](https://www.youtube.com/watch?v=RplXYjxgZbw) which shows the process of how to install Anaconda, CUDA and cuDNN. Installation of TensorFlow is not needed as it will be installed in the later stages. This video is also made for TensorFlow-GPU v1.4, so download and istall the CUDA and cuDNN versions for the latest TensorFlow version instead of the versions stated here. The compability of CUDA and cuDNN versions needed for TensorFlow is stated in their [official website](https://www.tensorflow.org/install/gpu). You can also refer to this [table](https://www.tensorflow.org/install/source#tested_build_configurations) to see the compatible version of CUDA and cuDNN for TensorFlow.
 
 When installing Anaconda, it will show that the Anaconda version is meant for Python >v3.8. It is fine to install it that way as we will be setting a virtual environment with Python v3.6.x later on.
@@ -37,18 +40,23 @@ TensorFlow-GPU:
 CUDA:
 cuDNN:
 
+<br />
+
 ## 2. Setting up Directory and Anaconda Virtual Environment
 
-### 2a. Download TensorFlow Object Detection API from GitHub
+<br />
 
+### 2a. Download TensorFlow Object Detection API from GitHub
 Create a new folder, and name it as TensorFlow(itc, I will be using E:\TensorFlow). This folder will contain the full TensorFlow Object Detection framework, as well as important data such as training images, training data, testing images, configuration files and everything else needed for the object detection classifier.
 
 [Download](https://github.com/tensorflow/models) the TensorFlow object detection repo by click the ```Clone or download``` button and downloading the zip file. Once downloadeed, extract the zip file and place the extracted folder in the directory created(E:\TensorFlow).
 
+<br />
 
 ## 3. Gathering Pictures
 To achieve a good TensorFlow model, you will need a lot of pictures to train the model. You can either collect the data yourself using your phone or use a python image scraping tool to achieve the exact number of pictures you want. I will be using the latter method with the help of ```flickr_scraper```.
 
+<br />
 
 ### 3a. Downloading
 With reference to [this](https://github.com/ultralytics/flickr_scraper), I will be downloading ```flickr_scraper``` to my PC.
@@ -77,6 +85,8 @@ python flickr_scraper.py --search "Nike Jordan 1 shoes" --n 100 --download
 
 The images download will be automatically saved in ```flickr_scraper\images\{name}``` folder with randomised names.
 
+<br />
+
 ### 3b. Resizing and Renaming
 Now that you have downloaded all the files, it's time to reaname and resize the images.
 It is generally good to have a smaller sample of images (size as low as 200KB) so that the training of the model will not take alot of time. It is fine to train the label and train the model as it is, but due to some images being extremely huge in size such as 4000x7000 pixels, the training will take alot more time. 
@@ -86,6 +96,7 @@ It is also a good practice to ensure that all your files are named properly. So,
 
 Great! This is all you will need for gathering pictures. Next, we will be labelling every picture that you want to train.
 
+<br />
 
 ## 4. Labelling Pictures
 Now to the very FUN part. Yay. This is the step where you will have to manually select the areas that you want the model to be trained. 
