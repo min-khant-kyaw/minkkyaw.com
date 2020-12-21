@@ -8,8 +8,9 @@ import BlogTags from "../../components/BlogTags";
 import styled from "styled-components";
 import BlockQuote from "../../components/mdx-styles/BlockQuote";
 import Serious from "../../components/mdx-styles/Serious";
+import Code from "../../components/mdx-styles/Code";
 
-const components = { BlockQuote, Serious };
+const components = { BlockQuote, Serious, Code };
 
 export default function Posts({ source, frontMatter }) {
   const content = hydrate(source, { components });
