@@ -6,9 +6,10 @@ import Body from "../../components/Container";
 import { Box, Heading, Text } from "@chakra-ui/react";
 import BlogTags from "../../components/BlogTags";
 import styled from "styled-components";
-import BlockQuote from "../../components/BlockQuote";
+import BlockQuote from "../../components/mdx-styles/BlockQuote";
+import Serious from "../../components/mdx-styles/Serious";
 
-const components = { BlockQuote };
+const components = { BlockQuote, Serious };
 
 export default function Posts({ source, frontMatter }) {
   const content = hydrate(source, { components });
