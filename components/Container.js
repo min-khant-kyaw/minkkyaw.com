@@ -33,7 +33,7 @@ export default function Body({ children }) {
     padding-left: 2rem;
     padding-right: 2rem;
     max-width: 42rem;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
     @media (min-width: 768px) {
       font-size: 1.125rem;
     }
