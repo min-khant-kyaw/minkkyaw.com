@@ -3,6 +3,7 @@ import Link from "next/link";
 import Body from "../../components/Container";
 import { getSortedPosts } from "../../lib/posts";
 import styled from "styled-components";
+import { NextSeo } from "next-seo";
 
 const BlogIndex = ({ allPostsData }) => {
   const DateText = styled(Text)`
@@ -18,6 +19,16 @@ const BlogIndex = ({ allPostsData }) => {
 
   return (
     <Body>
+      <NextSeo
+        title="Blog - Min Khant Kyaw"
+        description="A story of my journey, learnings and personal life"
+        canonical="https://minkkyaw.com/blog"
+        openGraph={{
+          url: "https://minkkyaw.com/blog",
+          title: "Blog - Min Khant Kyaw",
+          description: "A story of my journey, learnings and personal life",
+        }}
+      />
       <Heading as="h1" size="2xl" marginTop="0">
         Blog
       </Heading>

@@ -1,6 +1,7 @@
 import { Heading, Text } from "@chakra-ui/react";
 import Body from "../components/Container";
 import styled from "styled-components";
+import { NextSeo } from "next-seo";
 
 const About = () => {
   const AboutTitle = styled(Heading)`
@@ -14,6 +15,16 @@ const About = () => {
 
   return (
     <Body>
+      <NextSeo
+        title="About Me – Min Khant Kyaw"
+        description="Learn more about me"
+        canonical="https://minkkyaw.com/about"
+        openGraph={{
+          url: "https://minkkyaw.com/about",
+          title: "About Me – Min Khant Kyaw",
+          description: "Learn more about me",
+        }}
+      />
       <AboutTitle as="h1">About Me</AboutTitle>
       <AboutBody>
         Hey. I'm Min aka UD to my friends. I work at Arrowcrest Technologies as
