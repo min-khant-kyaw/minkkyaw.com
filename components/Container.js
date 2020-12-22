@@ -11,13 +11,14 @@ const BodyContainer = styled(Container)`
   @media (min-width: 768px) {
   }
 `;
-const NavMenu = styled.a`
+const NavMenu = styled.div`
   display: flex;
   justify-content: flex-end;
   padding: 2rem;
 `;
 const NavbarLinks = styled.a`
   font-size: 1rem;
+  text-decoration: none;
   color: gray;
   padding: 0.25rem;
   @media (min-width: 640px) {
@@ -52,15 +53,9 @@ export default function Body({ children }) {
     <BodyContainer centerContent={true}>
       <NavBar>
         <NavMenu>
-          <NextLink href="/blog">
-            <NavbarLinks>Blog</NavbarLinks>
-          </NextLink>
-          <NextLink href="/about">
-            <NavbarLinks>About</NavbarLinks>
-          </NextLink>
-          <NextLink href="/">
-            <NavbarLinks>Home</NavbarLinks>
-          </NextLink>
+          <NavbarLinks href="/blog">Blog</NavbarLinks>
+          <NavbarLinks href="/about">About</NavbarLinks>
+          <NavbarLinks href="/">Home</NavbarLinks>
         </NavMenu>
       </NavBar>
       <BodyMain>{children}</BodyMain>
