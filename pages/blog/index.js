@@ -3,6 +3,7 @@ import Link from "next/link";
 import Body from "../../components/Container";
 import { getSortedPosts } from "../../lib/posts";
 import styled from "styled-components";
+import { NextSeo } from "next-seo";
 
 const BlogIndex = ({ allPostsData }) => {
   const DateText = styled(Text)`
