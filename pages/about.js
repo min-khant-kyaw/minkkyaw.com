@@ -3,16 +3,17 @@ import Body from "../components/Container";
 import styled from "styled-components";
 import { NextSeo } from "next-seo";
 
-const About = () => {
-  const AboutTitle = styled(Heading)`
-    margin-bottom: 1rem;
-  `;
-  const AboutBody = styled(Text)`
-    margin-bottom: 2rem;
-    color: gray;
-    letter-spacing: 0.025rem;
-  `;
+const AboutTitle = styled(Heading)`
+margin-top: 0;
+margin-bottom: 1rem;
+`;
+const AboutBody = styled(Text)`
+margin-bottom: 2rem;
+color: gray;
+letter-spacing: 0.025rem;
+`;
 
+const About = () => {
   return (
     <Body>
       <NextSeo

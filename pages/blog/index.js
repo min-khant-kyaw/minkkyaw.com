@@ -5,18 +5,18 @@ import { getSortedPosts } from "../../lib/posts";
 import styled from "styled-components";
 import { NextSeo } from "next-seo";
 
-const BlogIndex = ({ allPostsData }) => {
-  const DateText = styled(Text)`
-    color: #404040;
-    letter-spacing: 0.025rem;
-    margin-bottom: 1rem;
-  `;
-  const BodyText = styled(Text)`
-    line-height: 1.5em;
-    color: gray;
-    letter-spacing: 0.025rem;
-  `;
+const DateText = styled(Text)`
+color: #404040;
+letter-spacing: 0.025rem;
+margin-bottom: 1rem;
+`;
+const BodyText = styled(Text)`
+line-height: 1.5em;
+color: gray;
+letter-spacing: 0.025rem;
+`;
 
+const BlogIndex = ({ allPostsData }) => {
   return (
     <Body>
       <NextSeo
