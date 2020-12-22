@@ -1,5 +1,6 @@
 import { ChakraProvider } from "@chakra-ui/react";
 import App from "next/app";
+import Head from "next/head";
 import React from "react";
 import { ThemeProvider } from "styled-components";
 import "../css/main.css";
@@ -16,7 +17,15 @@ export default class MyApp extends App {
 
     return (
       <ThemeProvider theme={theme}>
-          <Component {...pageProps} />
+        <Head>
+          <link rel="preconnect" href="https://fonts.gstatic.com" />
+          <link
+            href="https://fonts.googleapis.com/css2?family=Inter&family=Lato&display=swap"
+            rel="stylesheet"
+          />
+          <title>Min Khant Kyaw - Developer, Writer</title>
+        </Head>
+        <Component {...pageProps} />
       </ThemeProvider>
     );
   }
