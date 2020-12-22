@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
 import NextLink from "next/link";
 import styled from "styled-components";
+import Footer from "./Footer";
 
 export default function Body({ children }) {
   const [mounted, setMounted] = useState(false);
@@ -62,6 +63,7 @@ export default function Body({ children }) {
         </NavMenu>
       </NavBar>
       <BodyMain>{children}</BodyMain>
+      <Footer />
     </Container>
   );
 }
