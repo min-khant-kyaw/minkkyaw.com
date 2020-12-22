@@ -18,6 +18,16 @@ const BlogIndex = ({ allPostsData }) => {
 
   return (
     <Body>
+      <NextSeo
+        title="Blog - Min Khant Kyaw"
+        description="A story of my journey, learnings and personal life"
+        canonical="https://minkkyaw.com/blog"
+        openGraph={{
+          url: "https://minkkyaw.com/blog",
+          title: "Blog - Min Khant Kyaw",
+          description: "A story of my journey, learnings and personal life",
+        }}
+      />
       <Heading as="h1" size="2xl" marginTop="0">
         Blog
       </Heading>
