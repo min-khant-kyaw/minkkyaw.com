@@ -21,6 +21,7 @@ export default class MyApp extends App {
       <ThemeProvider theme={theme}>
         <Head>
           <html lang="en"/>
+          <link rel="preload" href="https://fonts.googleapis.com" />
           <link href="/static/favicons/favicon.ico" rel="shortcut icon" />
           <link href="/static/favicons/site.webmanifest" rel="manifest" />
           <link rel="preconnect" href="https://fonts.gstatic.com" />
