@@ -3,7 +3,7 @@ import App from "next/app";
 import Head from "next/head";
 import React from "react";
 import { ThemeProvider } from "styled-components";
-import { DefaultSEO } from "next-seo";
+import { DefaultSeo } from "next-seo";
 import SEO from "../next-seo.config";
 import "../css/main.css";
 
@@ -47,7 +47,7 @@ export default class MyApp extends App {
           <meta charSet="utf-8" />
           <meta name="viewport" content="width=device-width, initial-scale=1" />
         </Head>
-        <DefaultSEO {...SEO} />
+        <DefaultSeo {...SEO} />
         <Component {...pageProps} />
       </ThemeProvider>
     );
