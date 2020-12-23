@@ -9,8 +9,8 @@ const CodeContainer = styled(Box)`
   border-radius: 6px;
 `;
 
-const Code = ({ children }) => {
-  return <CodeContainer as="span">{children}</CodeContainer>;
+const MultiCode = ({ children }) => {
+  return <CodeContainer>{children}</CodeContainer>;
 };
 
-export default Code;
+export default MultiCode;
