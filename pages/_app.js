@@ -5,6 +5,7 @@ import { ThemeProvider } from "styled-components";
 import { DefaultSeo } from "next-seo";
 import SEO from "../next-seo.config";
 import "../css/main.css";
+import Head from "next/head";
 
 const theme = {
   colors: {
@@ -19,6 +20,12 @@ export default class MyApp extends App {
     return (
       <>
         <ThemeProvider theme={theme}>
+          <Head>
+            <meta
+              name="viewport"
+              content="width=device-width, initial-scale=1"
+            />
+          </Head>
           <DefaultSeo {...SEO} />
           <Component {...pageProps} />
         </ThemeProvider>
