@@ -18,7 +18,10 @@ font-size: 2.5rem;
 }
 `
 const TitleGIF = styled(Typed)`
-font-size: 1.35rem;
+font-size: 1.2rem;
+@media (min-width: 350px) {
+    font-size: 1.35rem;
+}
 @media (min-width: 768px) {
     font-size: 3rem;
 }
