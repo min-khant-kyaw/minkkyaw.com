@@ -56,6 +56,7 @@ export default class MyDocument extends Document {
             sizes="16x16"
             type="image/png"
           />
+          <meta http-equiv="X-UA-Compatible" contnt="IE=edge" />
           <meta charSet="utf-8" />
         </Head>
         <body>
