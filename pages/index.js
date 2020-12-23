@@ -6,13 +6,13 @@ import styled from "styled-components";
 import { Text } from "@chakra-ui/react";
 import Projects from "../components/Projects";
 
-const HomeContent = () => {
-  const BodyText = styled(Text)`
-    line-height: 1.5em;
-    color: gray;
-    letter-spacing: 0.025rem;
-  `;
+const BodyText = styled(Text)`
+line-height: 1.5em;
+color: gray;
+letter-spacing: 0.025rem;
+`;
 
+const HomeContent = () => {
   return (
     <Body>
       <Title

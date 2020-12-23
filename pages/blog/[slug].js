@@ -12,21 +12,22 @@ import Code from "../../components/mdx-styles/Code";
 
 const components = { BlockQuote, Serious, Code };
 
+const BlogTitle = styled(Heading)`
+margin-top: 0 !important;
+margin-bottom: 1.5rem;
+letter-spacing: -0.012rem;
+@media (min-width: 768px) {
+    font-size: 3rem;
+  }
+`;
+const BlogContent = styled(Text)`
+  line-height: 2rem;
+  margin-top: 2rem;
+`;
+
 export default function Posts({ source, frontMatter }) {
   const content = hydrate(source, { components });
 
-  const BlogTitle = styled(Heading)`
-  margin-top: 0 !important;
-  margin-bottom: 1.5rem;
-  letter-spacing: -0.012rem;
-  @media (min-width: 768px) {
-      font-size: 3rem;
-    }
-  `;
-  const BlogContent = styled(Text)`
-    line-height: 2rem;
-    margin-top: 2rem;
-  `;
   return (
     <Body>
       <BlogTitle as="h1">{frontMatter.title}</BlogTitle>
