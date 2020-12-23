@@ -14,7 +14,7 @@ const SEO = {
     description,
     images: [
       {
-        url: "https://minkkyaw.com/static/images/banner.svg",
+        url: "https://minkkyaw.com/static/images/banner.png",
         alt: title,
         width: 1280,
         height: 720,
