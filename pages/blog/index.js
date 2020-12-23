@@ -6,15 +6,22 @@ import styled from "styled-components";
 import { NextSeo } from "next-seo";
 
 const DateText = styled(Text)`
-color: #404040;
-letter-spacing: 0.025rem;
-margin-bottom: 1rem;
+  color: #404040;
+  letter-spacing: 0.025rem;
+  margin-bottom: 1rem;
+`;
+const BlogHeading = styled(Heading)`
+  color: black;
+  letter-spacing: 0.025rem;
 `;
 const BodyText = styled(Text)`
-line-height: 1.5em;
-color: gray;
-letter-spacing: 0.025rem;
+  line-height: 1.5em;
+  color: gray;
+  letter-spacing: 0.025rem;
 `;
+const BlogLinks = styled.a`
+  text-decoration: none;
+`
 
 const BlogIndex = ({ allPostsData }) => {
   return (
@@ -46,12 +53,14 @@ const BlogIndex = ({ allPostsData }) => {
           <Grid h="100%" marginBottom="2rem">
             <GridItem>
               <Link key={slug} href="/blog/[slug]" as={`/blog/${slug}`}>
-                <Heading as="h3" size="md">
-                  {title}
-                </Heading>
+                <BlogLinks>
+                  <BlogHeading as="h3" size="md">
+                    {title}
+                  </BlogHeading>
+                  <DateText>{date}</DateText>
+                  <BodyText>{excerpt}</BodyText>
+                </BlogLinks>
               </Link>
-              <DateText>{date}</DateText>
-              <BodyText>{excerpt}</BodyText>
             </GridItem>
           </Grid>
         </Flex>
