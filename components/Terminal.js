@@ -2,7 +2,6 @@ import styled from 'styled-components'
 import { Jumbotron, Row, Col } from 'react-bootstrap';
 import { Text } from '@chakra-ui/react';
 
-
 const TerminalDiv = styled(Jumbotron)`
 background: transparent;
 padding: 1rem 0;
