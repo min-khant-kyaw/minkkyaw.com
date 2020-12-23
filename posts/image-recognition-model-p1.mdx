@@ -50,34 +50,35 @@ cuDNN:
 
 Create a new folder, and name it as TensorFlow(itc, I will be using E:\TensorFlow). This folder will contain the full TensorFlow Object Detection framework, as well as important data such as training images, training data, testing images, configuration files and everything else needed for the object detection classifier.
 
-[Download](https://github.com/tensorflow/models) the TensorFlow object detection repo by click the `Clone or download` button and downloading the zip file. Once downloadeed, extract the zip file and place the extracted folder in the directory created(E:\TensorFlow).
+[Download](https://github.com/tensorflow/models) the TensorFlow object detection repo by click the <Code>Clone or download</Code> button and downloading the zip file. Once downloadeed, extract the zip file and place the extracted folder in the directory created(E:\TensorFlow).
 
 <br />
 
 ## 3. Gathering Pictures
 
-To achieve a good TensorFlow model, you will need a lot of pictures to train the model. You can either collect the data yourself using your phone or use a python image scraping tool to achieve the exact number of pictures you want. I will be using the latter method with the help of `flickr_scraper`.
+To achieve a good TensorFlow model, you will need a lot of pictures to train the model. You can either collect the data yourself using your phone or use a python image scraping tool to achieve the exact number of pictures you want. I will be using the latter method with the help of <Code>flickr_scraper</Code>.
 
 <br />
 
 ### 3a. Downloading
 
-With reference to [this](https://github.com/ultralytics/flickr_scraper), I will be downloading `flickr_scraper` to my PC.
+With reference to [this](https://github.com/ultralytics/flickr_scraper), I will be downloading <Code>flickr_scraper</Code> to my PC.
 
-```
-git clone https://github.com/ultralytics/flickr_scraper
-cd flickr_scraper
-pip install -U -r requirements.txt
-```
+<MultiCode>
+git clone https://github.com/ultralytics/ flickr_scraper
+
+cd flickr_scraper pip
+
+install -U -r requirements.txt
+
+</MultiCode>
 
 This will download flickr_scraper to your PC, but you will not be able to the scraper just yet.
 You will need to Sign Up for flickr and request for an API key [here](https://www.flickr.com/services/apps/create/apply)
 
-Open `flickr_scraper.py` and input the API key and secret in Line 9 & 10
+Open <Code>flickr_scraper.py</Code> and input the API key and secret in Line 9 & 10
 
-**key = ''**
-
-**secret = ''**
+<MultiCode>key = '' secret = ''</MultiCode>
 
 Now you have successfully setup your scraper and you are now able to execute it by running the following command
 
@@ -93,7 +94,7 @@ The images download will be automatically saved in **flickr_scraper\images\{name
 
 Now that you have downloaded all the files, it's time to reaname and resize the images.
 It is generally good to have a smaller sample of images (size as low as 200KB) so that the training of the model will not take alot of time. It is fine to train the label and train the model as it is, but due to some images being extremely huge in size such as 4000x7000 pixels, the training will take alot more time.
-It is also a good practice to ensure that all your files are named properly. So, to reduce the filesize as well as the size of the image itself while renaming the file, open up `resizer.py` in the Python IDE that comes with the installation of python.
+It is also a good practice to ensure that all your files are named properly. So, to reduce the filesize as well as the size of the image itself while renaming the file, open up <Code>resizer.py</Code> in the Python IDE that comes with the installation of python.
 
 Great! This is all you will need for gathering pictures. Next, we will be labelling every picture that you want to train.
 
@@ -106,14 +107,14 @@ LabelImg is a great tool to help with the labelling process. It's [Github page](
 
 If you can't be bothered to read instructions, just download the tool from [here](https://www.dropbox.com/s/tq7zfrcwl44vxan/windows_v1.6.0.zip?dl=1)
 
-Once LabelImg is launched, make sure to `Change Dir`to your train directory and `Change Save Dir`to the same directory as well. Also, repeat the same process for test directory.
+Once LabelImg is launched, make sure to <Code>Change Dir</Code> to your train directory and <Code>Change Save Dir</Code> to the same directory as well. Also, repeat the same process for test directory.
 
 I was tasked to label 1000+ images. No problem, I was being paid to do this...
 
-<p>
+<p text-align="center">
   <img
-    width="300"
-    height="300"
+    width="250"
+    height="250"
     src="https://media1.tenor.com/images/e8811ef763720c5a399379dd68b641f9/tenor.gif?itemid=6139291"
     title="Not paid enough for this"
   />

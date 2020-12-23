@@ -9,8 +9,9 @@ import styled from "styled-components";
 import BlockQuote from "../../components/mdx-styles/BlockQuote";
 import Serious from "../../components/mdx-styles/Serious";
 import Code from "../../components/mdx-styles/Code";
+import MultiCode from "../../components/mdx-styles/MultiCode";
 
-const components = { BlockQuote, Serious, Code };
+const components = { BlockQuote, Serious, Code, MultiCode };
 
 const BlogTitle = styled(Heading)`
 margin-top: 0 !important;
