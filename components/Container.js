@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
 import NextLink from "next/link";
-import { Container } from "@chakra-ui/react";
+import { Button, Container, useColorMode } from "@chakra-ui/react";
 import styled from "styled-components";
 import Footer from "./Footer";
 
@@ -44,13 +44,19 @@ const NavBar = styled.nav`
   backdrop-filter: saturate(180%) blur(20px);
 `;
 
+
+
 export default function Body({ children }) {
+  const { colorMode, toggleColorMode } = useColorMode();
   const [mounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
   useEffect(() => setMounted(true), []);
 
   return (
     <BodyContainer centerContent={true}>
+      <Button onClick={toggleColorMode}>
+        Toggle {colorMode === "light" ? "Dark" : "Light"}
+      </Button>
       <NavBar>
         <NavMenu>
           <NavbarLinks href="/blog">Blog</NavbarLinks>
