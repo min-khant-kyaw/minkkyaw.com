@@ -7,15 +7,21 @@ import SEO from "../next-seo.config";
 import "../css/main.css";
 import Head from "next/head";
 
-const colors = {
-  brand: {
-    900: "#1a365d",
-    800: "#153e75",
-    700: "#2a69ac",
+const styling = {
+  styles: {
+    global: (props) => ({
+      a: {
+        color: props.colorMode === "dark" ? "teal.300" : "teal.500",
+      },
+      h1: {
+        marginTop: "3rem",
+        marginBottom: "1.5rem",
+      }
+    }),
   },
 }
 
-const theme = extendTheme({colors})
+const theme = extendTheme({styling})
 
 export default class MyApp extends App {
   render() {

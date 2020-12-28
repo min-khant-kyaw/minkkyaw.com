@@ -1,6 +1,10 @@
 import { Box, Container, Heading, Link, Text } from "@chakra-ui/react";
 import styled from "styled-components";
 
+const ProjectTitle = styled(Heading)`
+margin-top: 3rem;
+margin-bottom:  1.5rem;
+`
 const ProjectContainer = styled(Box)`
   border: 1px solid silver;
   border-radius: 0.5rem;
@@ -40,7 +44,7 @@ const projects = [
 const Projects = () => {
   return (
     <Container>
-      <Heading as="h1">Projects</Heading>
+      <ProjectTitle as="h1">Projects</ProjectTitle>
       {projects.map(({ title, description, image, link }) => (
         <ProjectLink href={link} isExternal>
           <ProjectContainer>
