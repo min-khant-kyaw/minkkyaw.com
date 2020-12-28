@@ -5,7 +5,7 @@ import { Container } from "@chakra-ui/react";
 import styled from "styled-components";
 import Footer from "./Footer";
 
-const BodyContainer = styled(Container)`
+const BodyContainer = styled.div`
   max-width: 56rem;
   margin: 0 auto;
   @media (min-width: 768px) {
