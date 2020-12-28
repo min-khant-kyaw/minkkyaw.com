@@ -1,4 +1,4 @@
-import { ChakraProvider } from "@chakra-ui/react";
+import { ChakraProvider, extendTheme } from "@chakra-ui/react";
 import App from "next/app";
 import React from "react";
 import { ThemeProvider } from "styled-components";
@@ -7,11 +7,15 @@ import SEO from "../next-seo.config";
 import "../css/main.css";
 import Head from "next/head";
 
-const theme = {
-  colors: {
-    primary: "#101010",
+const colors = {
+  brand: {
+    900: "#1a365d",
+    800: "#153e75",
+    700: "#2a69ac",
   },
-};
+}
+
+const theme = extendTheme({colors})
 
 export default class MyApp extends App {
   render() {
@@ -19,7 +23,7 @@ export default class MyApp extends App {
 
     return (
       <>
-        <ThemeProvider theme={theme}>
+        <ChakraProvider theme={theme}>
           <Head>
             <meta
               name="viewport"
@@ -28,7 +32,7 @@ export default class MyApp extends App {
           </Head>
           <DefaultSeo {...SEO} />
           <Component {...pageProps} />
-        </ThemeProvider>
+        </ChakraProvider>
       </>
     );
   }
