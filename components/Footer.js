@@ -5,11 +5,15 @@ const FooterLinks = styled(Link)`
 margin-left: 0.5rem;
 margin-right: 0.5rem;
 ` 
-
+const FooterContainer = styled.div`
+width:100%;
+max-width: none;
+margin-bottom: 2rem;
+`
 
 const Footer = () => {
   return (
-    <Container marginBottom="2rem">
+    <FooterContainer>
       <Center>
         <FooterLinks target="_blank" href="https://www.github.com/min-khant-kyaw">
           <Image boxSize="20px" width="20px" height="20px" alt="GitHub Link" src="/icons/github.svg" />
@@ -27,7 +31,7 @@ const Footer = () => {
           <Image boxSize="20px" width="20px" height="20px" alt="Twitter Link" src="/icons/twitter.svg" />
         </FooterLinks>
       </Center>
-    </Container>
+    </FooterContainer>
   );
 };
 
