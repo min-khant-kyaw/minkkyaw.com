@@ -1,0 +1,28 @@
+---
+title: "Major upgrade on the CRM"
+date: "2020-06-23"
+author: "Min Khant Kyaw"
+excerpt: "Using Google Maps Direction API to verify Location"
+read: "4 minute read"
+---
+
+# Why Google Map Directions API
+
+Our CRM will be having an Attendance feature where we will be able to get the location of the employee upon clocking in. Doing this will ensure that there will be more accurate tracking on when and where the employees clock in and out.
+We use the [Directions API](https://developers.google.com/maps/documentation/directions/start) to set the start point to the employee's mobile device while setting the end point to the chosen destination. Doing so will enable us to know the distance between the employee and the chosen destination, preventing deceptive clocking in. We then set the pop up box to show if the employee is more than 500m away from the chosen destination.
+
+<br />
+
+# The implementation process
+
+Before the implementation process, we will need an [API key](https://developers.google.com/maps/documentation/directions/get-api-key) from Google Maps. After getting the API key, [click here](https://maps.googleapis.com/maps/api/directions/json?origin=Disneyland&destination=Universal+Studios+Hollywood&key=YOUR_API_KEY) to call a sample request to the API, replacing **YOUR_API_KEY** with the actual API key generated. It should return a sample response in JSON format.
+
+In my case, I will be getting the coordinates of the employee's mobile device and putting that as the origin, while replacing the destination as the coordinates of their chosen location. I will also be adding the mode of travel as **walking** due to some roads only allowing one-way traffic. Since, there are multiple sites that the employees are working at, we will be giving a list of destination to choose from.
+
+The final API request is as follows: [Link](https://maps.googleapis.com/maps/api/directions/json?origin=LATITUTE,LONGITUDE&destination=LATITUTE,LONGITUDE&key=YOUR_API_KEY).
+
+<br />
+
+# Conclusion
+
+By implementing this feature, we were able to keep track of employee whereabouts and were also able to increase the Key Performance Index(KPI) of our company by 200%, doubling the time and speed engineers report to fault calls. By knowing where employees check in, the maintenance team was able to deploy engineers to the required destination more efficiently. 
