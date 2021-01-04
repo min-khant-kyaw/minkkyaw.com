@@ -1,0 +1,33 @@
+---
+title: "Major upgrade on the CRM II"
+date: "2020-11-12"
+author: "Min Khant Kyaw"
+excerpt: "Adding Signature feature to the Attendance system in CRM"
+read: "4 minute read"
+---
+
+# Why add Signature
+
+Our CRM will be having an Attendance feature where we will be able to allow supervisors to sign their signature for the team they are responsible. Doing this will ensure that the HR department will always be kept up to date on the work timing of the employees(especially workers).
+Before adding the Signature feature to the CRM, the HR department sent out emails to the respective supervisors and waited for the supervisors to reply so that they were able to validate the work timings of the workers. This reduces efficiency in the work of HR as the HR will have to wait for the reply before being able to start calculating the pay for these workers.
+To resolve this, I have discussed with the HR department and repective supervisors on ways to improve on this area. 
+
+<br />
+
+# The implementation process
+
+I make use of third-party javascript plugin called [Signature_pad](https://github.com/szimek/signature_pad) developed by [Szymon Nowak](https://github.com/szimek). This plugin allows users to draw signature with their mouse, clear the signature pad, undo the last stroke and save the picture of the signature in their desired image format.
+Since Signature Pads can be extremely useful and is a reusable feature for many other pages, I've decided to create the Signature Pad as a resuable UI component using React. I've also developed this component as a pop-up, meaning that wherever I need a Signature Pad to be displayed, I would just need to import the Signature Pad to allow users to see the popup and input their signature.
+
+<br />
+
+# Future Issues 
+
+Ok.. So, supervisors can sign and confirm the attendance of the workers. But, what if the workers were actually checking out an hour after they've done their job or what if they have forgotten to check out? Maybe they are coming to work an hour earlier or checking out an hour later to get an hour more pay. The supervisor also notices it.. What does he do? Does he inform the HR department to assist on changing the work timing? Does he talk to the worker to check out an hour earlier than before to make up for the hour?
+To solve this issue, I've decided to add Date/Time inputs together with the Signature Pad for supervisors to be able to edit the timings of Check In and Check Out. This newly updated data will also be saved in a new database column, meaning that the system will be able to retrieve and display the older version of the work timings if neccessary. We will be able to keep track of the supervisor that provided signature for the workers as well. [Picture](https://res.cloudinary.com/deqb1mah6/image/upload/v1609730440/Signature_Pad.png)
+
+<br />
+
+# Conclusion
+
+By implementing this feature, we were able to increase the work efficiency of the HR department. By allowing the supervisors to verify the work timing of the workers everyday instead of every month, supervisors will also be less prone to forgetfulness. The HR department will also be able to calculate the payments of workers more effectively, without needing to wait for the reply from the supervisor, minimizing the back and forth action among the HR department and supervisors.
