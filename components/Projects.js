@@ -2,9 +2,9 @@ import { Box, Container, Heading, Image, Link, Text } from "@chakra-ui/react";
 import styled from "styled-components";
 
 const ProjectTitle = styled(Heading)`
-margin-top: 3rem;
-margin-bottom:  1.5rem;
-`
+  margin-top: 3rem;
+  margin-bottom: 1.5rem;
+`;
 const ProjectContainer = styled(Box)`
   display:flex;
   align-items:center;
@@ -17,7 +17,7 @@ const ProjectContainer = styled(Box)`
 const ImageConainer = styled.div`
   display: flex;
   padding-right: 1em;
-`
+`;
 const ProjectHeading = styled(Heading)`
   font-size: 1.5rem;
   margin-bottom: 0.75rem;
@@ -37,6 +37,11 @@ const projects = [
       "Building and Deploying the personal portfolio page that you are looking at right now",
     image: "/static/images/portfolio.png",
     link: "https://github.com/min-khant-kyaw/nextjs-portfolio",
+  },
+  {
+    title: "Cayuga Qognify",
+    description: "Integrating Cayuga SDK into existing application to send SMS messages when alarm event triggers from camera",
+    image: "/static/images/cayuga.png",
   },
   {
     title: "Arrowcrest CRM",
@@ -68,7 +73,13 @@ const Projects = () => {
         <ProjectLink href={link} isExternal>
           <ProjectContainer>
             <ImageConainer>
-              <Image src={image} alt="Project image" boxSize="100px" htmlWidth="100px" htmlHeight="100px" />
+              <Image
+                src={image}
+                alt="Project image"
+                boxSize="100px"
+                htmlWidth="100px"
+                htmlHeight="100px"
+              />
             </ImageConainer>
             <div>
               <ProjectHeading as="h2">{title}</ProjectHeading>
