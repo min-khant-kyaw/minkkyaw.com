@@ -35,13 +35,20 @@ const projects = [
     title: "Portfolio",
     description:
       "Building and Deploying the personal portfolio page that you are looking at right now",
-    image: "/static/favicons/android-chrome-512x512.png",
+    image: "/static/images/portfolio.png",
     link: "https://github.com/min-khant-kyaw/nextjs-portfolio",
+  },
+  {
+    title: "Arrowcrest CRM",
+    description:
+      "Upgrading and Maintenance of the CRM Application used by employees",
+    image: "/static/images/crm.png",
+    link: "http://arrowcrest.gotdns.com/ArrowCRM",
   },
   {
     title: "TradeIt",
     description:
-      "An android application that allows you to contact others via email and trade items. Uses Firebase API.",
+      "An android application that allows you to contact others via email and trade items. Uses Firebase API",
     image: "/static/images/tradeit.png",
     link: "https://github.com/min-khant-kyaw/TradeItCA2",
   },
