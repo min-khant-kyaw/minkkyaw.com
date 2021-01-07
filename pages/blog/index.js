@@ -21,6 +21,7 @@ const BodyText = styled(Text)`
 `;
 const BlogLinks = styled.a`
   text-decoration: none;
+  cursor: pointer;
 `
 
 const BlogIndex = ({ allPostsData }) => {
