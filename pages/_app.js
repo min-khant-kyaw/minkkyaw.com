@@ -1,4 +1,4 @@
-import { ThemeProvider, theme } from "@chakra-ui/react";
+import { ThemeProvider, theme, ColorModeProvider } from "@chakra-ui/react";
 import App from "next/app";
 import React from "react";
 import { DefaultSeo } from "next-seo";
@@ -12,11 +12,21 @@ export default class MyApp extends App {
 
     return (
       <ThemeProvider theme={theme}>
-        <Head>
-          <meta name="viewport" content="width=device-width, initial-scale=1" />
-        </Head>
-        <DefaultSeo {...SEO} />
-        <Component {...pageProps} />
+        <ColorModeProvider
+          options={{
+            useSystsemColorMode: true,
+          }}
+        >
+          <Head>
+            <meta
+              name="viewport"
+              content="width=device-width, initial-scale=1"
+            />
+          </Head>
+          <DefaultSeo {...SEO} />
+
+          <Component {...pageProps} />
+        </ColorModeProvider>
       </ThemeProvider>
     );
   }
