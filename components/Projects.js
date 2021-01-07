@@ -38,7 +38,7 @@ const projects = [
     title: "TradeIt",
     description:
       "An android application that allows you to contact others via email and trade items. Uses Firebase API.",
-    image: "https://source.unsplash.com/random",
+    image: "/static/images/tradeit.png",
     link: "https://github.com/min-khant-kyaw/TradeItCA2",
   },
   {
