@@ -63,6 +63,7 @@ const projects = [
     description:
       "A hybrid mobile applcation for internal usage with a web portal to control the contents of the application.",
     image: "/static/images/wartsila.png",
+    link: "https://res.cloudinary.com/deqb1mah6/video/upload/v1610001508/Promotional_Video_tkwzwe.wmv",
   },
 ];
 
