@@ -45,20 +45,22 @@ font-size: 1.1rem;
 
 const info = [{
     title: "UD.fullName",
-    value: "Min Khant Kyaw"
+    value: "Min Khant Kyaw",
+    link: "https://www.linkedin.com/in/min-khant-kyaw-ud",
     // "UD.skills":  "[\"HTML5\", \"CSS\", \"Javascript\", \"C#\", \"SQL\"]"
 },
 {
     title: "UD.currentLocation",
-    value: "Singapore"
+    value: "Singapore",
+    link: "https://en.wikipedia.org/wiki/Singapore",
 }, {
     title: "UD.resume",
     value: "minkhantkyaw.pdf",
-    link: "/static/Resume.pdf"
+    link: "/static/Resume.pdf",
 }, {
     title: "UD.education",
     value: "Diploma in Information Technology (SP)",
-    link: "https://www.sp.edu.sg/soc/courses/full-time-diplomas/information-technology/overview"
+    link: "https://www.sp.edu.sg/soc/courses/full-time-diplomas/information-technology/overview",
 }]
 
 const colors = {
