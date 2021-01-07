@@ -4,7 +4,7 @@ import hydrate from "next-mdx-remote/hydrate";
 import matter from "gray-matter";
 import Body from "../../components/Container";
 import { Box, Heading, Text } from "@chakra-ui/react";
-import BlogTags from "../../components/BlogTags";
+import BlogDetails from "../../components/BlogDetails";
 import styled from "styled-components";
 import BlockQuote from "../../components/mdx-styles/BlockQuote";
 import Serious from "../../components/mdx-styles/Serious";
@@ -32,7 +32,7 @@ export default function Posts({ source, frontMatter }) {
   return (
     <Body>
       <BlogTitle as="h1">{frontMatter.title}</BlogTitle>
-      <BlogTags
+      <BlogDetails
         author={frontMatter.author}
         date={frontMatter.date}
         read={frontMatter.read}

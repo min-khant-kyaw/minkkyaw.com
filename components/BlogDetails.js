@@ -16,7 +16,7 @@ const Read = styled(Text)`
 color: #404040;
 `
 
-const BlogTags = ({ author, date, read }) => {
+const BlogDetails = ({ author, date, read }) => {
   return (
     <Flex>
       <Box ml="3">
@@ -30,4 +30,4 @@ const BlogTags = ({ author, date, read }) => {
   );
 };
 
-export default BlogTags;
+export default BlogDetails;
