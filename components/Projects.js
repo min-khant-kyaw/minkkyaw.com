@@ -42,6 +42,7 @@ const projects = [
     title: "Cayuga Qognify",
     description: "Integrating Cayuga SDK into existing application to send SMS messages when alarm event triggers from camera",
     image: "/static/images/cayuga.png",
+    link: "https://github.com/min-khant-kyaw/alarm_trigger",
   },
   {
     title: "Arrowcrest CRM",
