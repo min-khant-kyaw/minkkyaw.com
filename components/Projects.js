@@ -67,7 +67,7 @@ const projects = [
 
 const Projects = () => {
   return (
-    <Container>
+    <div>
       <ProjectTitle as="h1">Projects</ProjectTitle>
       {projects.map(({ title, description, image, link }) => (
         <ProjectLink href={link} isExternal>
@@ -90,7 +90,7 @@ const Projects = () => {
           </ProjectContainer>
         </ProjectLink>
       ))}
-    </Container>
+    </div>
   );
 };
 
