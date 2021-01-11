@@ -15,6 +15,9 @@ const Footer = () => {
   return (
     <FooterContainer>
       <Center>
+        <FooterLinks target="_blank" href="mailto:min.kkyaw0101@gmail.com">
+          <Image boxSize="20px" width="20px" height="20px" alt="Email Link" src="/icons/email.svg" />
+        </FooterLinks>
         <FooterLinks target="_blank" href="https://www.github.com/min-khant-kyaw">
           <Image boxSize="20px" width="20px" height="20px" alt="GitHub Link" src="/icons/github.svg" />
         </FooterLinks>
