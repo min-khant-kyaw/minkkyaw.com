@@ -5,6 +5,13 @@ import { getSortedPosts } from "../../lib/posts";
 import styled from "styled-components";
 import { NextSeo } from "next-seo";
 
+const TitleHeading = styled(Heading)`
+  margin-top: 0;
+`;
+const RecentHeading = styled(Heading)`
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+`;
 const DateText = styled(Text)`
   color: #404040;
   letter-spacing: 0.025rem;
@@ -21,7 +28,8 @@ const BodyText = styled(Text)`
 `;
 const BlogLinks = styled.a`
   text-decoration: none;
-`
+  cursor: pointer;
+`;
 
 const BlogIndex = ({ allPostsData }) => {
   return (
@@ -36,18 +44,14 @@ const BlogIndex = ({ allPostsData }) => {
           description: "A story of my journey, learnings and personal life",
         }}
       />
-      <Heading as="h1" size="2xl" marginTop="0">
-        Blog
-      </Heading>
+      <TitleHeading as="h1">Blog</TitleHeading>
       <BodyText>
         I've always wanted to kept a journal of my life and what better way to
         do than to write blogs. I've started writing blogs after my 20th
         birthday as my New Year Resolution, mostly about my journey, experience
         and projects I've been doing and things learnt throughout the journey.
       </BodyText>
-      <Heading as="h1" size="2xl" marginY="2rem">
-        Recent Blogs
-      </Heading>
+      <RecentHeading as="h1">Recent Blogs</RecentHeading>
       {allPostsData.map(({ slug, date, title, excerpt }) => (
         <Flex flexDir="column">
           <Grid h="100%" marginBottom="2rem">

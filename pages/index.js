@@ -23,7 +23,7 @@ const HomeContent = () => {
         ]}
       />
       <BodyText>
-        I'm a developer and a wrtier. I am a software developer working at
+        I'm a developer and a writer. I am a software developer working at
         Arrowcrest Technologies. This is my personal profile - everything about
         me can be found here.
       </BodyText>

@@ -47,16 +47,11 @@ const NavBar = styled.nav`
 
 
 export default function Body({ children }) {
-  const { colorMode, toggleColorMode } = useColorMode();
   const [mounted, setMounted] = useState(false);
-  const { theme, setTheme } = useTheme();
   useEffect(() => setMounted(true), []);
 
   return (
     <BodyContainer centerContent={true}>
-      <Button onClick={toggleColorMode}>
-        Toggle {colorMode === "light" ? "Dark" : "Light"}
-      </Button>
       <NavBar>
         <NavMenu>
           <NavbarLinks href="/blog">Blog</NavbarLinks>
