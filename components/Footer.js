@@ -22,8 +22,8 @@ const Footer = () => {
         >
           <Image
             boxSize="20px"
-            width="512px"
-            height="512px"
+            width="20px"
+            height="20px"
             alt="Email Link"
             src="/icons/email.svg"
           />
@@ -35,8 +35,8 @@ const Footer = () => {
         >
           <Image
             boxSize="20px"
-            width="512px"
-            height="512px"
+            width="20px"
+            height="20px"
             alt="GitHub Link"
             src="/icons/github.svg"
           />
@@ -48,8 +48,8 @@ const Footer = () => {
         >
           <Image
             boxSize="20px"
-            width="512px"
-            height="512px"
+            width="20px"
+            height="20px"
             alt="LinkedIn Link"
             src="/icons/linkedin.svg"
           />
@@ -61,8 +61,8 @@ const Footer = () => {
         >
           <Image
             boxSize="20px"
-            width="512px"
-            height="512px"
+            width="20px"
+            height="20px"
             alt="Telegram Link"
             src="/icons/paper-plane.svg"
           />
@@ -74,8 +74,8 @@ const Footer = () => {
         >
           <Image
             boxSize="20px"
-            width="512px"
-            height="512px"
+            width="20px"
+            height="20px"
             alt="Instagram Link"
             src="/icons/instagram.svg"
           />
@@ -87,8 +87,8 @@ const Footer = () => {
         >
           <Image
             boxSize="20px"
-            width="512px"
-            height="512px"
+            width="20px"
+            height="20px"
             alt="Twitter Link"
             src="/icons/twitter.svg"
           />
