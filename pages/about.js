@@ -67,7 +67,7 @@ const About = () => {
       <AboutTitle as="h2">Music</AboutTitle>
       <AboutBody>
         I am a big fan of hip-hop and rap. My current favorite artists are
-        Drake, Lil Tjay and Pop Smoke.
+        Polo G, Lil Tjay and Pop Smoke.
         {/* TODO ADD SPOTIFY AWESOME API */}
       </AboutBody>
     </Body>
