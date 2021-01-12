@@ -84,7 +84,7 @@ export default function Terminal() {
                     <TerminalRow key={i}>
                         <Col>
                             <Text>{info.title}</Text>
-                            <TerminalLink target="_blank" href={info.link}>"<strong>{info.value}</strong>"</TerminalLink>
+                            <TerminalLink target="_blank" rel="noopener" href={info.link}>"<strong>{info.value}</strong>"</TerminalLink>
                         </Col>
                     </TerminalRow>
                 )}
