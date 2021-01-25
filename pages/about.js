@@ -4,13 +4,13 @@ import styled from "styled-components";
 import { NextSeo } from "next-seo";
 
 const AboutTitle = styled(Heading)`
-margin-top: 0;
-margin-bottom: 1rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
 `;
 const AboutBody = styled(Text)`
-margin-bottom: 2rem;
-color: gray;
-letter-spacing: 0.025rem;
+  margin-bottom: 2rem;
+  color: gray;
+  letter-spacing: 0.025rem;
 `;
 
 const About = () => {
@@ -33,9 +33,10 @@ const About = () => {
         <br />
         <br />
         I'm a Singapore Polytechnic graduate and a holder of Diploma in
-        Information Technology. I planned to pursue a part time Computer Science
-        degree in Nanyang Technological University (NTU). I write about my
-        journey, tech and my career on my blog.
+        Information Technology. I plan to pursue a part time Computer Science
+        degree in Nanyang Technological University (NTU) or part time Software
+        Engineering degree in National University of Singapore (NUS). I write
+        about my journey, tech and my career on my blog.
         <br />
         <br />I grew up in Yangon, Myanmar before moving to Singapore when I was
         14. My interest in Computer Science began when I was 7, where I learnt
@@ -66,8 +67,8 @@ const About = () => {
       </AboutBody>
       <AboutTitle as="h2">Music</AboutTitle>
       <AboutBody>
-        I am a big fan of hip-hop and rap. My current favorite artists are
-        Polo G, Lil Tjay and Pop Smoke.
+        I am a big fan of hip-hop and rap. My current favorite artists are Polo
+        G, Lil Tjay and Pop Smoke.
         {/* TODO ADD SPOTIFY AWESOME API */}
       </AboutBody>
     </Body>
