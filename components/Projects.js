@@ -35,7 +35,14 @@ const projects = [
     title: "Portfolio",
     description:
       "Building and Deploying the personal portfolio page that you are looking at right now",
-    image: "/static/images/portfolio.png",
+    image: "/static/images/savemm.jpg",
+    link: "https://savemyanmar2021.com",
+  },
+  {
+    title: "Portfolio",
+    description:
+      "Building and Deploying the personal portfolio page that you are looking at right now",
+    image: "/static/images/portfolio.jpg",
     link: "https://github.com/min-khant-kyaw/nextjs-portfolio",
   },
   {
@@ -48,21 +55,21 @@ const projects = [
     title: "Arrowcrest CRM",
     description:
       "Upgrading and Maintenance of the CRM Application used by employees",
-    image: "/static/images/crm.png",
+    image: "/static/images/crm.jpg",
     link: "http://arrowcrest.gotdns.com/ArrowCRM",
   },
   {
     title: "TradeIt",
     description:
       "An android application that allows you to contact others via email and trade items. Uses Firebase API",
-    image: "/static/images/tradeit.png",
+    image: "/static/images/tradeit.jpg",
     link: "https://github.com/min-khant-kyaw/TradeItCA2",
   },
   {
     title: "Wartsila",
     description:
       "A hybrid mobile applcation for internal usage with a web portal to control the contents of the application.",
-    image: "/static/images/wartsila.png",
+    image: "/static/images/wartsila.jpg",
     link: "https://res.cloudinary.com/deqb1mah6/video/upload/v1610001508/Wartsila_Promotional_Video.wmv",
   },
 ];
