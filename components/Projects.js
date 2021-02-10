@@ -32,9 +32,9 @@ const ProjectLink = styled(Link)`
 
 const projects = [
   {
-    title: "Portfolio",
+    title: "Save Myanmar 2021",
     description:
-      "Building and Deploying the personal portfolio page that you are looking at right now",
+      "A project by a group of friends who wishes to raise awareness of a coup happening in Myanmar. The website is updated daily with new content to help international communities under more about the country",
     image: "/static/images/savemm.jpg",
     link: "https://savemyanmar2021.com",
   },
@@ -93,7 +93,7 @@ const Projects = () => {
             <div>
               <ProjectHeading as="h2">{title}</ProjectHeading>
               <Box>
-                <ProjectText>{description}</ProjectText>
+                <ProjectText noOfLines={2}>{description}</ProjectText>
               </Box>
             </div>
           </ProjectContainer>
