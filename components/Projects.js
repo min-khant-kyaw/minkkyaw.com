@@ -32,6 +32,20 @@ const ProjectLink = styled(Link)`
 
 const projects = [
   {
+    title: "KitchenHub, mVISTA",
+    description:
+      "A revamped website developed using nextJS and Wordpress for Kitchen Hub, which displays a wide selection of products available.",
+    image: "/static/images/mvista.png",
+    link: "https://mvista-1vgyqutwh-wunderfauks.vercel.app/",
+  },
+  {
+    title: "5 on 25",
+    description:
+      "A restaurant website developed using nextJS and Wordpress for Andaz Singapore Hotel by Hyatt, with the help of graphic designers.",
+    image: "/static/images/5on25.png",
+    link: "https://5on25.com",
+  },
+  {
     title: "Save Myanmar 2021",
     description:
       "A project by a group of friends who wishes to raise awareness of a coup happening in Myanmar. The website is updated daily with new content to help international communities under more about the country",
