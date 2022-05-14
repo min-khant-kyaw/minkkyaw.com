@@ -59,6 +59,7 @@ const About = ({ currentlyPlaying, lastPlayed }) => {
         first football game I watched on TV was their match against Barcelona on
         2009, and have been a supporter since then.
       </AboutBody>
+      <></>
       <AboutTitle as="h2">Fashion</AboutTitle>
       <AboutBody>
         I have recently developed a keen interest in fashion and been following
