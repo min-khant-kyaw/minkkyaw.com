@@ -53,7 +53,34 @@ const About = ({ currentlyPlaying, lastPlayed }) => {
         </AboutBody>
         <NowPlaying playing={currentlyPlaying} lastPlayed={lastPlayed} />
       </Box>
-      
+      <Box mt={"2em"}>
+        <AboutTitle as={"h2"}>Football</AboutTitle>
+        <AboutBody>
+          I am an avid follower of Chelsea Football Club and would watch most of
+          their matches without fail if their matches are played on weekends.
+          The first football game I watched on TV was their match against
+          Barcelona on 2009, and have been a supporter since then.
+        </AboutBody>
+      </Box>
+      <Box mt={"2em"}>
+        <AboutTitle as="h2">Fashion</AboutTitle>
+        <AboutBody>
+          I have recently developed a keen interest in fashion and been
+          following fashion icons such as A$AP Rocky, Playboi Carti and several
+          other hip-hop icons. I also follow other fashion icons such as Wisdom
+          Kaye, Justin Livingston and Phil Cohen. I've also been trying to
+          develop my own style and taste in fashion.
+        </AboutBody>
+      </Box>
+      <Box mt={"2em"}>
+        <AboutTitle as="h2">Games</AboutTitle>
+        <AboutBody>
+          Games have been a part of my life since I was a child. Ever since I
+          got my first PC, I have been in love with the story and art of
+          different game genres. Although I have much lesser time now, I would
+          still try to make time to play games I really loved as a child.
+        </AboutBody>
+      </Box>
       {/* <AboutTitle as="h2">Football</AboutTitle>
       <Text mb={"2rem"} color={"gray !important"} letterSpacing={"0.025rem"}>
         I am an avid follower of Chelsea Football Club and would watch most of
