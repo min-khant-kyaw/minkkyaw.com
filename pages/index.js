@@ -17,15 +17,14 @@ const HomeContent = () => {
     <Body>
       <Title
         contents={[
+          "I'm <strong>a software developer.",
           "I'm <strong>a web developer.",
-          "I'm <strong>a mobile app developer.",
           "I'm <strong>an AI/ML enthusiast.",
         ]}
       />
       <BodyText>
-        I'm a developer and a writer. I am a software developer working at
-        Arrowcrest Technologies. This is my personal profile - everything about
-        me can be found here.
+        I'm a developer and a writer. I am currently working as a web developer at Wunderfauks.
+        This is my personal profile - everything about me can be found here.
       </BodyText>
       <Terminal />
       <Projects />
