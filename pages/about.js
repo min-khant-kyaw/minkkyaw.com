@@ -80,7 +80,7 @@ const About = ({ spotify }) => {
         I listen to depends on the vibe of the day!
 
         {/* TODO ADD SPOTIFY AWESOME API */}
-        I am now play {nowPlaying.track_name}.
+        I am now playing {nowPlaying.track_name}.
       </AboutBody>
     </Body>
   );
