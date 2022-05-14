@@ -26,8 +26,8 @@ const NowPlaying = ({ playing, lastPlayed }) => {
   ) : (
     <Flex flexDir={"column"}>
       <Text pb={"0.75em"} color={"gray !important"}>
-        Min isn't listening to Spotify at this moment! But check out his latest
-        played song:
+        Min isn't listening to Spotify at this moment! But this was his last
+        played song, check it out :
       </Text>
       <iframe
         id="currently-playing"
