@@ -52,8 +52,8 @@ const BlogIndex = ({ allPostsData }) => {
         and projects I've been doing and things learnt throughout the journey.
       </BodyText>
       <RecentHeading as="h1">Recent Blogs</RecentHeading>
-      {allPostsData.map(({ slug, date, title, excerpt }) => (
-        <Flex flexDir="column">
+      {allPostsData.map(({ slug, date, title, excerpt }, index) => (
+        <Flex key={index} flexDir="column">
           <Grid h="100%" marginBottom="2rem">
             <GridItem>
               <Link key={slug} href="/blog/[slug]" as={`/blog/${slug}`}>

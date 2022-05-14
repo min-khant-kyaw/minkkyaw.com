@@ -92,8 +92,8 @@ const Projects = () => {
   return (
     <div>
       <ProjectTitle as="h1">Projects</ProjectTitle>
-      {projects.map(({ title, description, image, link }) => (
-        <ProjectLink href={link} isExternal>
+      {projects.map(({ title, description, image, link }, index) => (
+        <ProjectLink key={index} href={link} isExternal>
           <ProjectContainer>
             <ImageConainer>
               <Image
