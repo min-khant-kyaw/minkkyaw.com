@@ -35,7 +35,7 @@ const projects = [
     title: "KitchenHub, mVISTA",
     description:
       "A revamped website developed using nextJS and Wordpress for Kitchen Hub, which displays a wide selection of products available.",
-    image: "/static/images/mvista.png",
+    image: "/static/images/mVISTA.png",
     link: "https://mvista-1vgyqutwh-wunderfauks.vercel.app/",
   },
   {
