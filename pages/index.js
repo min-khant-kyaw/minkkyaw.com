@@ -23,7 +23,7 @@ const HomeContent = () => {
         ]}
       />
       <BodyText>
-        I'm a developer and a writer. I am currently working as a web developer at Wunderfauks.
+        I'm a developer and a writer. I am currently working as a Web/Full Stack developer at Wunderfauks.
         This is my personal profile - everything about me can be found here.
       </BodyText>
       <Terminal />

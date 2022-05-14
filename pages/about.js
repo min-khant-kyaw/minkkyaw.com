@@ -28,15 +28,14 @@ const About = () => {
       />
       <AboutTitle as="h1">About Me</AboutTitle>
       <AboutBody>
-        Hey. I'm Min aka UD to my friends. I work at Arrowcrest Technologies as
-        a Software Developer.
+        Hey. I'm Min aka UD to my friends. I work at Wunderfauks as
+        a Web/Full Stack Developer.
         <br />
         <br />
         I'm a Singapore Polytechnic graduate and a holder of Diploma in
-        Information Technology. I plan to pursue a part time Computer Science
-        degree in Nanyang Technological University (NTU) or part time Software
-        Engineering degree in National University of Singapore (NUS). I write
-        about my journey, tech and my career on my blog.
+        Information Technology. I am currently pursuing a part time Computer Science
+        degree in Nanyang Technological University (NTU). I write about my journey, tech,
+        and my career on my blog.
         <br />
         <br />I grew up in Yangon, Myanmar before moving to Singapore when I was
         14. My interest in Computer Science began when I was 7, where I learnt
@@ -67,8 +66,9 @@ const About = () => {
       </AboutBody>
       <AboutTitle as="h2">Music</AboutTitle>
       <AboutBody>
-        I am a big fan of hip-hop and rap. My current favorite artists are Polo
-        G, Lil Tjay and Pop Smoke.
+        I am a big fan of hip-hop and rap. I do dabble with other genres and the songs
+        I listen to depends on the vibe of the day!
+
         {/* TODO ADD SPOTIFY AWESOME API */}
       </AboutBody>
     </Body>
