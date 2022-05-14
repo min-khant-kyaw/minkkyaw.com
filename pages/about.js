@@ -2,6 +2,7 @@ import { Heading, Text } from "@chakra-ui/react";
 import Body from "../components/Container";
 import styled from "styled-components";
 import { NextSeo } from "next-seo";
+import { getCurrentTrack } from "../lib/spotify";
 
 const AboutTitle = styled(Heading)`
   margin-top: 0;
@@ -13,7 +14,16 @@ const AboutBody = styled(Text)`
   letter-spacing: 0.025rem;
 `;
 
-const About = () => {
+const About = ({ spotify }) => {
+  let artist = spotify.item.artists.map( item => `${item.name}`).join(', ')
+  const nowPlaying = {
+    track_id: spotify.item.id,
+    track_name: spotify.item.name,
+    artists: artist,
+    link : spotify.item.external_urls.spotify
+  }
+  // console.log(spotify)
+
   return (
     <Body>
       <NextSeo
@@ -70,9 +80,18 @@ const About = () => {
         I listen to depends on the vibe of the day!
 
         {/* TODO ADD SPOTIFY AWESOME API */}
+        I am now play {nowPlaying.track_name}.
       </AboutBody>
     </Body>
   );
 };
 
 export default About;
+
+export async function getServerSideProps() {
+  // Fetch data from external API
+  let spotify = await getCurrentTrack();
+
+  // Pass data to the page via props
+  return { props: { spotify } };
+}

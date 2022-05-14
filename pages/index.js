@@ -7,9 +7,9 @@ import { Text } from "@chakra-ui/react";
 import Projects from "../components/Projects";
 
 const BodyText = styled(Text)`
-line-height: 1.5em;
-color: gray;
-letter-spacing: 0.025rem;
+  line-height: 1.5em;
+  color: gray;
+  letter-spacing: 0.025rem;
 `;
 
 const HomeContent = () => {
@@ -23,8 +23,9 @@ const HomeContent = () => {
         ]}
       />
       <BodyText>
-        I'm a developer and a writer. I am currently working as a Web/Full Stack developer at Wunderfauks.
-        This is my personal profile - everything about me can be found here.
+        I'm a developer and a writer. I am currently working as a Web/Full Stack
+        developer at Wunderfauks. This is my personal profile - everything about
+        me can be found here.
       </BodyText>
       <Terminal />
       <Projects />
