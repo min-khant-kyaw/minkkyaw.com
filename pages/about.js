@@ -1,4 +1,4 @@
-import { Flex, Heading, Text } from "@chakra-ui/react";
+import { Box, Flex, Heading, Text } from "@chakra-ui/react";
 import Body from "../components/Container";
 import styled from "styled-components";
 import { NextSeo } from "next-seo";
@@ -44,22 +44,23 @@ const About = ({ currentlyPlaying, lastPlayed }) => {
         web devlopment at KMD Computer Training Centre.
       </AboutBody>
       <AboutTitle as="h1">Personal Interest</AboutTitle>
-      <AboutTitle as="h2">Music</AboutTitle>
-      <AboutBody>
-        I am a big fan of hip-hop and rap. I do dabble with other genres and the
-        songs I listen to depends on the vibe of the day!
-        <br />
-        <br />
+      <Box>
+        <AboutTitle as="h2">Music</AboutTitle>
+        <AboutBody>
+          I am a big fan of hip-hop and rap. I do dabble with other genres and
+          the songs I listen to depends on the vibe of the day!
+          <br />
+        </AboutBody>
         <NowPlaying playing={currentlyPlaying} lastPlayed={lastPlayed} />
-      </AboutBody>
-      <AboutTitle as="h2">Football</AboutTitle>
-      <AboutBody>
+      </Box>
+      
+      {/* <AboutTitle as="h2">Football</AboutTitle>
+      <Text mb={"2rem"} color={"gray !important"} letterSpacing={"0.025rem"}>
         I am an avid follower of Chelsea Football Club and would watch most of
         their matches without fail if their matches are played on weekends. The
         first football game I watched on TV was their match against Barcelona on
         2009, and have been a supporter since then.
-      </AboutBody>
-      <></>
+      </Text>
       <AboutTitle as="h2">Fashion</AboutTitle>
       <AboutBody>
         I have recently developed a keen interest in fashion and been following
@@ -74,7 +75,7 @@ const About = ({ currentlyPlaying, lastPlayed }) => {
         my first PC, I have been in love with the story and art of different
         game genres. Although I have much lesser time now, I would still try to
         make time to play games I really loved as a child.
-      </AboutBody>
+      </AboutBody> */}
     </Body>
   );
 };
