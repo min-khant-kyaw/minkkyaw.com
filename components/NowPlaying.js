@@ -1,22 +1,43 @@
-import { Flex } from "@chakra-ui/react";
+import { Flex, Text } from "@chakra-ui/react";
 
-const NowPlaying = ({ data }) => {
-  const isPlaying = data.isPlaying;
-  const currentlyPlaying = isPlaying ? "https://open.spotify.com/embed/track/" + data.trackId + "?utm_source=generator" : ""
+const NowPlaying = ({ playing, lastPlayed }) => {
+  const isPlaying = playing.isPlaying;
+  const currentlyPlaying = isPlaying
+    ? "https://open.spotify.com/embed/track/" +
+      playing.trackId +
+      "?utm_source=generator"
+    : "https://open.spotify.com/embed/track/" +
+      lastPlayed.trackId +
+      "?utm_source=generator";
   return isPlaying ? (
-    <Flex borderRadius={"12px"}>
+    <Flex flexDir={"column"}>
+      <Text pb={"0.75em"} color={"gray !important"}>
+        Min's currently listening to:
+      </Text>
       <iframe
         id="currently-playing"
         src={currentlyPlaying}
         width="100%"
         height="380"
         frameBorder="0"
-        allowfullscreen=""
-        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+        allow="autoplay; clipboard-write; encrypted-media;"
       ></iframe>
     </Flex>
   ) : (
-    <Flex>Min isn't listening to Spotify at this moment!</Flex>
+    <Flex flexDir={"column"}>
+      <Text pb={"0.75em"} color={"gray !important"}>
+        Min isn't listening to Spotify at this moment! But check out his latest
+        played song:
+      </Text>
+      <iframe
+        id="currently-playing"
+        src={currentlyPlaying}
+        width="100%"
+        height="380"
+        frameBorder="0"
+        allow="autoplay; clipboard-write; encrypted-media;"
+      ></iframe>
+    </Flex>
   );
 };
 
