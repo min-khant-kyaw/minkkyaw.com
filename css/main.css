@@ -11,3 +11,7 @@ h1 {
     margin-top: 3rem;
     margin-bottom: 1.5rem;
 }
+
+#currently-playing {
+  border-radius: 12px;
+}

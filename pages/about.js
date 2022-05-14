@@ -1,8 +1,9 @@
-import { Heading, Text } from "@chakra-ui/react";
+import { Flex, Heading, Text } from "@chakra-ui/react";
 import Body from "../components/Container";
 import styled from "styled-components";
 import { NextSeo } from "next-seo";
 import { getCurrentTrack } from "../lib/spotify";
+import NowPlaying from "../components/NowPlaying";
 
 const AboutTitle = styled(Heading)`
   margin-top: 0;
@@ -15,15 +16,6 @@ const AboutBody = styled(Text)`
 `;
 
 const About = ({ spotify }) => {
-  let artist = spotify.item.artists.map( item => `${item.name}`).join(', ')
-  const nowPlaying = {
-    track_id: spotify.item.id,
-    track_name: spotify.item.name,
-    artists: artist,
-    link : spotify.item.external_urls.spotify
-  }
-  // console.log(spotify)
-
   return (
     <Body>
       <NextSeo
@@ -38,14 +30,14 @@ const About = ({ spotify }) => {
       />
       <AboutTitle as="h1">About Me</AboutTitle>
       <AboutBody>
-        Hey. I'm Min aka UD to my friends. I work at Wunderfauks as
-        a Web/Full Stack Developer.
+        Hey. I'm Min aka UD to my friends. I work at Wunderfauks as a Web/Full
+        Stack Developer.
         <br />
         <br />
         I'm a Singapore Polytechnic graduate and a holder of Diploma in
-        Information Technology. I am currently pursuing a part time Computer Science
-        degree in Nanyang Technological University (NTU). I write about my journey, tech,
-        and my career on my blog.
+        Information Technology. I am currently pursuing a part time Computer
+        Science degree in Nanyang Technological University (NTU). I write about
+        my journey, tech, and my career on my blog.
         <br />
         <br />I grew up in Yangon, Myanmar before moving to Singapore when I was
         14. My interest in Computer Science began when I was 7, where I learnt
@@ -76,12 +68,11 @@ const About = ({ spotify }) => {
       </AboutBody>
       <AboutTitle as="h2">Music</AboutTitle>
       <AboutBody>
-        I am a big fan of hip-hop and rap. I do dabble with other genres and the songs
-        I listen to depends on the vibe of the day!
-
-        {/* TODO ADD SPOTIFY AWESOME API */}
-        I am now playing {nowPlaying.track_name}.
+        I am a big fan of hip-hop and rap. I do dabble with other genres and the
+        songs I listen to depends on the vibe of the day!
+        <br />
       </AboutBody>
+      <NowPlaying data={spotify} />
     </Body>
   );
 };
