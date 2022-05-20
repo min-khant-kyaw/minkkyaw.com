@@ -59,8 +59,8 @@ const info = [{
     link: "/static/Resume.pdf",
 }, {
     title: "UD.education",
-    value: "Diploma in Information Technology (SP)",
-    link: "https://www.sp.edu.sg/soc/courses/full-time-diplomas/information-technology/overview",
+    value: "Bachelors of Engineering in Computer Science (NTU)",
+    link: "https://www.ntu.edu.sg/education/undergraduate-programme/beng-(computer-science)",
 }]
 
 const colors = {
